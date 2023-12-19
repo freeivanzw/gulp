@@ -6,6 +6,7 @@ const cssnano      = require('gulp-cssnano');
 const rename       = require('gulp-rename'); 
 const del          = require('del'); 
 const webp       = require('gulp-webp');
+const gulpPug = require('gulp-pug');
 
  
 gulp.task('sass', function() { 
@@ -60,6 +61,15 @@ gulp.task('prebuild', async function() {
  
 });
 
+function compilePugTask() {
+	return gulp.src('src/pug/*.pug')
+		.pipe(gulpPug({
+			pretty: true,
+
+		}))
+		.pipe(gulp.dest('./src'));
+}
+
 gulp.task('serve', function () {
 
     browserSync.init({
@@ -69,7 +79,7 @@ gulp.task('serve', function () {
 		notify: false
     });
 
-
+	gulp.watch("src/pug/**/*.pug").on("change", gulp.series(compilePugTask, reload));
     gulp.watch("*.html").on("change", reload);
 	gulp.watch('src/css/sass/**/*.scss', gulp.parallel('sass-dev')).on("change", reload);
 	gulp.watch('src/*.html').on("change", reload) ;
