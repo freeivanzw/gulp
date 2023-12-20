@@ -1,6 +1,6 @@
+include ../components/header/header
+include ../components/footer/footer
 doctype html
-mixin button(name)
-    a.btn= name
 
 html(lang="en")
     head
@@ -11,10 +11,10 @@ html(lang="en")
         link(rel="stylesheet" href="./css/main.css")
         link(rel="stylesheet" href="./css/adaptive.css")
     body
-        include ../components/header/header
+        +header()
         main
             block content
-        include ../components/footer/footer
+        +footer()
 
         script(src="./js/jquery.min.js")
         script(src="./js/plugins/slick.min.js")
