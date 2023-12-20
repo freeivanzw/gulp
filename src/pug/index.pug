@@ -1,25 +1,34 @@
 extends layouts/main.pug
+include mixins/buttons
+include mixins/dropdown
 block content
+    //- Declaration
+
+
     .styleguide
-        .dropdown.order_payment
-            .overflow
-                span Спосіб оплати
-                button.drop_arrow
-            ul
-                li test test test 1
-                li test test test 2
-                li test test test 3
-                li test test test 4
-            input(type="hidden" name="payment" value="")
+    +dropdown({
+        name: 'Спосію оплати',
+        className: 'order_payment',
+        list: ['ua', 'pl', 'sdfsdf']
+    })
+    +btn({
+        name: 'клипочка велика',
+        size: 'big',
+    })
+    +btn({
+        name: 'клипочка велика',
+        size: 'small',
+    })
+    +btn({
+        name: 'клипочка велика',
+    })
+    article
+        h1 Hello World
+        h2 Hello World
+        h3 Hello World
+        h4 Hello Worl
 
-        article
-            h1 Hello World
-            h2 Hello World
-            h3 Hello World
-            h4 Hello World
 
 
 
 
-
-    .btn.test test
