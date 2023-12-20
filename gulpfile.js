@@ -81,7 +81,7 @@ gulp.task('serve', function () {
 
 	gulp.watch("src/pug/**/*.pug").on("change", gulp.series(compilePugTask, reload));
     gulp.watch("*.html").on("change", reload);
-	gulp.watch('src/css/sass/**/*.scss', gulp.parallel('sass-dev')).on("change", reload);
+	gulp.watch('*/**/*.scss', gulp.parallel('sass-dev')).on("change", reload);
 	gulp.watch('src/*.html').on("change", reload) ;
 	gulp.watch('src/js/**/*.js').on("change", reload);
 });

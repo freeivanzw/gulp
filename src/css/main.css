@@ -759,3 +759,6 @@ a.sub_title:hover {
 }
 
 /*HEADER*/
+.site_header {
+  background-color: red;
+}

@@ -1,30 +1,30 @@
 @media only screen and (min-width: 480px) {
   /*HEADER*/
-  h1 {
-    color: red;
+  .site_header {
+    background-color: red;
   }
 }
 @media only screen and (min-width: 640px) {
   /*HEADER*/
-  h2 {
-    color: blue;
+  .site_header {
+    background-color: #f7ff00;
   }
 }
 @media only screen and (min-width: 768px) {
   /*HEADER*/
-  h1 {
-    color: yellow;
+  .site_header {
+    background-color: #00ff15;
   }
 }
 @media only screen and (min-width: 1024px) {
   /*HEADER*/
-  h1 {
-    color: green;
+  .site_header {
+    background-color: #003cff;
   }
 }
 @media only screen and (min-width: 1280px) {
   /*HEADER*/
-  h1 {
-    color: gray;
+  .site_header {
+    background-color: #ff00c3;
   }
 }

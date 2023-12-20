@@ -1,4 +1,4 @@
-@import "./components/header/header-adaptive";
+@import "../../pug/components/header/header-adaptive";
 
 @media only screen and (min-width : 480px)  {
     @include header-480;
