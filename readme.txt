@@ -7,4 +7,4 @@ JS бібліотеки
 
 Компоненти, ui і стилі для них мають лежати в папці src/pug, стилі для них підключати в src/css/sass/main.scss і adaptive.scss по зразку
 
-зображення в src/images
+зображення в src/images !
